@@ -1,0 +1,552 @@
+@charset "UTF-8";
+
+/************************************/
+/************************************/
+/************************************/
+/**************  Home  **************/
+/************************************/
+/************************************/
+/************************************/
+
+.mobilehomeLogoDiv {
+/*	z-index: 5;*/
+	text-align: center;
+	width: 100%;
+}
+.mobilehomeLogo {
+	width: 300px;
+	height: auto;
+	padding-bottom: 20px;
+}
+.mobilehomeLogoText {
+	color: #ffffff;
+	font-size: 16px;
+}
+.mobilehomeDiv {
+	background: url('../img/home/homeBg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+}
+.mobilehomeDiv, .mobilehomeRow, .mobilehomeCol {
+	height: 100%;
+	padding: 0;
+}
+.mobilehomeCol1 {
+	background: url('../img/home/homeBg1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+.mobilehomeCol2 {
+	background: url('../img/home/homeBg2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+.mobilehomeCol3 {
+	background: url('../img/home/homeBg3.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+.mobilehomeCol4 {
+	background: url('../img/home/homeBg4.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+.mobilehomeCol5 {
+	background: url('../img/home/homeBg5.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+
+/************************************/
+/************************************/
+/************************************/
+/*************  Story  **************/
+/************************************/
+/************************************/
+/************************************/
+
+.storyDiv {
+	height: 100% !important;
+	overflow-y: hidden !important;
+}
+.storyRow, .storyCol {
+/*	height: 100% !important;	*/
+	padding: 0;
+}
+.storyCol2 {
+	height: 100vh !important;
+}
+.storyTextDiv {
+	display: block;
+	width: 75%;
+	padding: 60px 0;
+	margin: auto;
+}
+.storyHeaderDiv {
+	align-content: flex-start;
+	display: flex;
+}
+.storyHeader {
+	color: #c0a35d;
+	padding-left: 60px;
+	font-size: 42px;
+	text-align: center;
+	padding-top: 30px;
+	font-weight: 900 !important;
+}
+.storyText {
+	margin-top: 100px;
+}
+
+/*  Story Left Image Div  */
+
+.storyImgDiv {
+	display: block;
+	font-size: 0;
+
+}
+.storyImgLeftDiv {
+	padding: 0;
+		font-size: 0;
+}
+
+.storyImgLeft {
+	width: 300px;
+	height: auto;
+	padding: 0;
+	margin: 100px 0 0 0;
+	display: inline;
+}
+.storyImgLeft1 {
+}
+.storyImgLeft2 {
+}
+.storyImgLeft1 {
+/*	margin-top: -40px;*/
+}
+
+/*
+.storyImgCol1 {
+	background: url('../img/story/story1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+.storyImgCol2 {
+	background: url('../img/story/story2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}*/
+
+/*  Story Right Image Div  */
+
+.storyCol2 {
+	text-align: right;
+	padding-top: 100px;
+	position: relative;
+}
+.storyImgRight1 {
+	width: 75%;
+	height: auto;
+}
+.storyImgRight2 {
+	position: absolute;
+	right: 0;
+	bottom: 30px;
+	width: 100%;
+	height: auto;
+}
+
+/************************************/
+/************************************/
+/************************************/
+/***************  What  *************/
+/************************************/
+/************************************/
+/************************************/
+
+.whatDiv {
+	padding-top: 60px;
+}
+.whatDiv, .whatRow, .whatCol {
+	height: 100% !important;
+}
+.whatCol1 {
+	padding: 0;
+}
+.whatImgLeft {
+	width: 50%;
+	height: auto;
+}
+.whatImgGold {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 90%;
+}
+
+/*  What Text Column  */
+
+.whatCol2 {
+	padding: 0 0 0 100px;
+}
+.whatTextDiv {
+	display: block;
+	width: 55%;
+	padding-left: 15px;
+/*	margin: auto;*/
+}
+.whatHeader {
+	color: #c0a35d;
+	font-size: 42px;
+	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.whatImgRowDiv {
+	width: 100%;
+}
+.whatImgRightRow {
+	width: 90%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+/*	padding: 0 0 0 60px;*/
+}
+.whatImgRight {
+	width: 100%;
+}
+.whatImgRightCol {
+	padding: 0;
+}
+
+/************************************/
+/************************************/
+/************************************/
+/***************  Who  **************/
+/************************************/
+/************************************/
+/************************************/
+
+.whoDiv {
+	height: 100%;
+}
+.whoGoldImg {
+	width: 100px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+.whoHeaderDiv {
+	display: flex;
+	align-content: flex-start;
+	padding-top: 60px;
+	width: 40vw;
+}
+.whoHeader {
+	text-align: center;
+	margin-top: 30px;
+	margin-left: 200px;
+	z-index: 1;
+	font-size: 42px;
+	color: #ffffff;
+}
+.whoSubHeader {
+	font-size: 24px;
+	color: #c0a35d;
+	line-height: 24px;
+	display: block;
+}
+.whoImgDiv {
+	font-size: 0;
+/*	width: 40vw;*/
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.whoImg {
+	width: 300px;
+	height: auto;
+	padding: 0;
+	display: inline;
+}
+.whoImg1 {
+/*	margin-top: 200px;*/
+}
+
+/*  Who Team Member Row  */
+
+.whoTeamRowDiv {
+	width: 100%;
+	padding-top: 30px;
+/*	height: 100%;*/
+}
+.whoTeamRow {
+	width: 90%;
+	padding-right: 60px;
+}
+.whoTeamCol {
+	padding: 0 10px;
+}
+.whoTeamImg {
+	width: 100%;
+	height: auto;
+}
+.whoTeamCaptionHeader {
+	color: #c0a35d;
+}
+.whoTeamCaptionText {
+	font-size: 12px;
+	margin-top: -10px;
+}
+
+/************************************/
+/************************************/
+/************************************/
+/************  Offerings  ***********/
+/************************************/
+/************************************/
+/************************************/
+
+.offersDiv {
+	height: 100%;
+	padding-top: 60px;
+}
+.offersHeader {
+	text-align: center;
+	color: #c0a35d;
+	font-size: 42px;
+	padding: 30px 0 20px 0;
+}
+.offersImg1 {
+	width: 250px;
+	height: auto;
+}
+
+/*  Offers Row  */
+
+.offersTextHeader {
+	font-size: 20px;
+	color: #c0a35d;
+}
+.offersRow {
+	padding: 0;
+}
+.offersCol {
+	padding-bottom: 20px;
+}
+.offersImg2 {
+	width: 250px;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+	left: 65%;
+}
+
+/************************************/
+/************************************/
+/************************************/
+/**************  Press  *************/
+/************************************/
+/************************************/
+/************************************/
+
+.pressDiv {
+	height: 100%;
+	padding: 60px;
+	width: 65%;
+}
+.pressHeader {
+	color: #c0a35d;
+	padding-top: 60px;
+	font-size: 42px;
+}
+.pressInfoDiv {
+	padding: 30px 0;
+	font-size: 16px;
+}
+.pressInfoHeader {
+	font-weight: 900 !important;
+}
+.pressInfoSubHeader {
+	display: block;
+	font-size: 12px;
+	margin-top: 5px;
+	font-weight: 400;
+}
+.pressInfoLink {
+	display: block;
+	width: 200px;
+	color: #000000;
+	background-color: #c0a35d;
+	border: 1px solid #c0a35d;
+	padding: 10px 0;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+/************************************/
+/************************************/
+/************************************/
+/************  Contact  *************/
+/************************************/
+/************************************/
+/************************************/
+
+.contactDiv {
+	height: 100% !important;
+	padding: 60px 0 0 0;
+}
+.contactMainDiv {
+	width: 30%;
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.contactHeader {
+	text-align: center;
+	color: #c0a35d;
+	font-size: 50px;
+	padding-bottom: 30px;
+	letter-spacing: 2px;
+}
+
+/*  Contact Form Section  */
+
+#contact {
+	padding: 0 30px;
+}
+#contact input[type=text], #contact input[type=tel], #contact input[type=email], #contact input[type=""], #contact textarea {
+	width: 100%;
+	padding: 13px;
+	border: 1.5px solid #000000 !important;
+	border: none;
+	box-sizing: border-box;
+	margin: 10px 0 0 0;
+	background-color: transparent;
+	font-size: 14px;
+	color: #000000;
+	transition-duration: .4s;
+}
+/*
+#contact input[type=text]:hover, #contact input[type=tel]:hover, #contact input[type=email]:hover, #contact input[type=""]:hover, #contact textarea:hover {
+	    border: 1px solid #2B292E;
+	color: #003D73;
+	transition-duration: .4s;
+	opacity: .75;
+}
+*/
+
+::-webkit-input-placeholder {
+ color: #000000;
+ opacity: 1; /* for older chrome versions. may no longer apply. */
+ transition-duration: .4s;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+ color: #000000;
+ opacity: 1;
+ transition-duration: .4s;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+ color: #000000;
+ opacity: 1;
+ transition-duration: .4s;
+}
+
+:-ms-input-placeholder {
+ color: #000000;
+ opacity: 1;
+ transition-duration: .4s;
+}
+input:hover::-webkit-input-placeholder {
+ color: #000000;
+ opacity: 1; /* for older chrome versions. may no longer apply. */
+ transition-duration: .4s;
+}
+textarea:hover::-webkit-input-placeholder {
+ color: #000000;
+ opacity: 1; /* for older chrome versions. may no longer apply. */
+ transition-duration: .4s;
+}
+input:hover::-moz-placeholder { /* Firefox 18- */
+ color: #000000;
+ opacity: 1;
+ transition-duration: .4s;
+}
+input:hover::-moz-placeholder {  /* Firefox 19+ */
+ color: #000000;
+ opacity: 1;
+ transition-duration: .4s;
+}
+input:hover::-ms-input-placeholder {
+ color: #000000;
+ opacity: 1;
+ transition-duration: .4s;
+}
+#contact button[type="submit"] {
+	background-color: #c0a35d;
+	color: #000000;
+/*	margin-left: 20px;*/
+/*	transition: background 500s;*/
+	text-decoration: none;
+	border: 1px solid #c0a35d;
+	display: block;
+	width: 200px;
+	margin: auto;
+	padding: 10px 0;
+	cursor: pointer;
+	font-size: 14px;
+	margin-top: 20px;
+	font-weight: 500;
+}
+#contact button[type="submit"]:hover {
+	background-color: transparent !important;
+	color: #c0a35d;
+}
+.contactSubmitButtonCol {
+	text-align: center;
+}
+.propertiesContactDiv {
+	padding: 30px 45px 45px 45px;
+}
+.contactCol {
+	padding: 0;
+}
+@media(min-width: 1000px) {
+/*
+.propertiesContactDiv {
+	width: 45vw;
+	margin: auto;
+}
+*/
+}
+@media (max-width: 1000px) {
+/*
+	.propertiesContactDiv {
+		margin: auto;
+		padding: 30px 30px 45px 30px;
+	}
+*/
+}
+
+@media (max-width:768px) {
+#contact button[type="submit"] {
+	margin: 30px auto auto auto;
+	width: 100% !important;
+}
+}

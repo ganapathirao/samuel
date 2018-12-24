@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.imageBg {
+    background-image: url('../img/pageCover.png') !important;
+    background-repeat: repeat;
+    background-position: left top;
+}
+
+#ifad {
+    background-image: url(none);
+    background-repeat: repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: auto;
+    background-color: none;
+}
+
+#i6o9f {
+    background-image: url(none);
+    background-repeat: repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: auto;
+    background-color: rgba(29, 56, 84, .9);
+}
+
+#iodiq {
+    width: 23px;
+}
+
+#inbz1 {
+    width: 187.4px;
+}
+
+#i6ro {
+    width: 25.2px;
+    background-color: #2699FB;
+}
+
+#is0x {
+    width: 188.2px;
+}
+
+.c956 {
+    width: 238px;
+    height: 155px;
+    margin: 60px 0 0 60px;
+    position: absolute;
+}
+
+.gjs-row {
+    display: table;
+    padding: 10px;
+    width: 100%;
+}
+
+.gjs-cell {
+    width: 8%;
+    display: table-cell;
+    height: 75px;
+}
+
+.c460 {
+    height: 21px;
+    padding: 0 0 0 0;
+    position: absolute;
+    bottom: 120px;
+}
+
+.c974 {
+    padding: 30px 10px 30px 10px;
+    font-size: 50px;
+    margin: 0 0 0 60px;
+    color: white;
+}
+
+.c492 {
+    height: 100%;
+    padding: 0 0 0 0;
+    background-image: url(none);
+    background-repeat: repeat;
+    background-position: left top;
+    background-attachment: scroll;
+    background-size: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.c3791 {
+    padding: 0 0 0 0;
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+}
+
+.c4258 {
+    padding: 10px;
+    color: white;
+    font-size: 22px;
+}
+
+@media (max-width: 768px) {
+    .gjs-cell {
+        width: 100%;
+        display: block;
+    }
+
+    .gjs-cell {
+        width: 100%;
+        display: block;
+    }
+
+    .gjs-cell {
+        width: 100%;
+        display: block;
+    }
+
+    .gjs-cell {
+        width: 100%;
+        display: block;
+    }
+
+    .gjs-cell {
+        width: 100%;
+        display: block;
+    }
+
+    .gjs-cell {
+        width: 100%;
+        display: block;
+    }
+
+    .gjs-cell {
+        width: 100%;
+        display: block;
+    }
+
+    .gjs-cell {
+        width: 100%;
+        display: block;
+    }
+
+    .gjs-cell {
+        width: 100%;
+        display: block;
+    }
+}

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>GrapesJS</title>
+  <link rel="stylesheet" href="dist/css/grapes.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="dist/grapes.min.js"></script>
+  <script src="dist/grapesjs-blocks-basic.min.js"></script>
+  <script src="dist/grapesjs-plugin-export.min.js"></script>
+  <script src="dist/grapesjs-parser-postcss.min.js"></script>
+  <script src="dist/grapesjs-plugin-boilerplate.min.js"></script>
+  <!-- <script src="dist/grapesjs-aviary.min.js"></script> -->
+  <style>
+    body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+    </style>
+</head>
+
+<body>
+  <div id="gjs" style="height:0px; overflow:hidden;">
+    <div id="ievf" class="gjs-row">
+      <div id="iz0k" class="gjs-cell"><img src="https://momentohospitality.com.au/bella-vista-hotel/wp-content/uploads/sites/3/2017/05/Grey-Box.jpeg"
+          class="c956" /></div>
+    </div>
+    <div class="gjs-row" id="ih6g">
+      <div class="gjs-cell" id="i6ro"></div>
+      <div class="gjs-cell" id="is0x"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var editor = grapesjs.init({
+      showOffsets: 1,
+      noticeOnUnload: 0,
+      container: '#gjs',
+      height: '100%',
+      fromElement: true,
+      plugins: ['gjs-blocks-basic', 'grapesjs-plugin-export', 'gjs-aviary', 'grapesjs-custom-code', editor =>
+        editor.on('log-parser-poscss',
+          console.log),
+        'grapesjs-parser-postcss'
+      ],
+      pluginsOpts: {
+        'gjs-blocks-basic': {},
+        'grapesjs-plugin-export': {},
+        'gjs-aviary': {
+          config: {}
+        },
+        'grapesjs-custom-code': {}
+      },
+
+      storageManager: {
+        id: 'gjs-', // Prefix identifier that will be used on parameters
+        type: 'local', // Type of the storage
+        autosave: true, // Store data automatically
+        autoload: true, // Autoload stored data on init
+        stepsBeforeSave: 1,
+      },
+      assetManager: {
+        storageType: '',
+        storeOnChange: true,
+        storeAfterUpload: true,
+        upload: 'https://localhost/assets/upload', //for temporary storage
+        assets: [],
+        uploadFile: function (e) {
+          var files = e.dataTransfer ? e.dataTransfer.files : e.target.files;
+          var formData = new FormData();
+          for (var i in files) {
+            formData.append('file-' + i, files[i]) //containing all the selected images from local
+          }
+          $.ajax({
+            url: '../img/upload_file.php',
+            type: 'POST',
+            data: formData,
+            contentType: false,
+            crossDomain: true,
+            dataType: 'json',
+            mimeType: "multipart/form-data",
+            processData: false,
+            success: function (result) {
+              var myJSON = [];
+              $.each(result['data'], function (key, value) {
+                myJSON[key] = value;
+              });
+              var images = myJSON;
+              editor.AssetManager.add(images); //adding images to asset manager of GrapesJS
+            }
+          });
+        },
+      },
+      styleManager: {
+        sectors: [{
+          name: 'General',
+          open: false,
+          buildProps: ['float', 'display', 'position', 'top', 'right', 'left', 'bottom']
+        }, {
+          name: 'Dimension',
+          open: false,
+          buildProps: ['width', 'height', 'max-width', 'min-height', 'margin', 'padding'],
+        }, {
+          name: 'Typography',
+          open: false,
+          buildProps: ['font-family', 'font-size', 'font-weight', 'letter-spacing', 'color', 'line-height',
+            'text-shadow'
+          ],
+        }, {
+          name: 'Decorations',
+          open: false,
+          buildProps: ['border-radius-c', 'background-color', 'border-radius', 'border', 'box-shadow',
+            'background'
+          ],
+        }, {
+          name: 'Extra',
+          open: false,
+          buildProps: ['transition', 'perspective', 'transform'],
+        }],
+      },
+    });
+
+    window.editor = editor;
+
+  </script>
+</body>
+
+</html>
