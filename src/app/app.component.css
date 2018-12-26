@@ -87,11 +87,20 @@
     color: #333;
     width: 100%;
     letter-spacing: 4px;
+    border-collapse: collapse;
+    display: inline-block;
+    vertical-align: top;
 }
+.table td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.table tr:nth-child(even){background-color: #f2f2f2;}
 table thead th{
     color: #C1C0C0;
     font-size: 14px;
 }
+
 .table > tbody > tr > td{
     padding: 8px;
     font-weight: 600;
@@ -100,4 +109,7 @@ table thead th{
 .table > thead > tr > th{
     color: #C1C0C0;
     font-size: 14px;
+}
+.map-container{
+    display: inline-block;
 }
