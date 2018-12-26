@@ -21,15 +21,15 @@
   </div>
 </div>
 
-<div class="search-wrapper">
+<div class="search-wrapper" *ngIf="headingOfCrimeRateIndex">
   <h3 class="search-title">CLR Search</h3>
   <table class="table">
     <thead>
       <tr>
-        <th class="text-left">2012 CRIME RATE INDEXES</th>
-        <th>CLEVELAND, OH 44114</th>
-        <th>OH</th>
-        <th>UNITED STATES</th>
+        <th class="text-left">{{headingOfCrimeRateIndex[0] }}</th>
+        <th>{{headingOfCrimeRateIndex[1]}}</th>
+        <th>{{headingOfCrimeRateIndex[2]}}</th>
+        <th>{{headingOfCrimeRateIndex[3]}}</th>
       </tr>
     </thead>
     <tbody>
