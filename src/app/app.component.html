@@ -1,49 +1,55 @@
-<div class="square-list" *ngIf="bikeDetails">
+<div class="square-list" *ngIf="isWalkerScore">
   <div class="square-list-item">
-    <div class="score-icon orange"></div>
+    <div class="score-icon orange"><i class="fas fa-user"></i></div>
     <h3>Walk Score</h3>
-    <p class="score-count orange">99</p>
+    <p class="score-count orange">{{walkscore}}</p>
     <h5>Walker's paradise</h5>
   </div>
-  <div class="square-list-item">
-    <div class="score-icon blue"></div>
+  <div class="square-list-item" *ngIf="isBikeDetails">
+    <div class="score-icon blue"><i class="fas fa-bicycle"></i></div>
     <h3>Walk Score</h3>
     <p class="score-count blue">{{bikeDetails.score}}</p>
     <h5>{{bikeDetails.description}}</h5>
-
   </div>
-  <div class="square-list-item">
-    <div class="score-icon green"></div>
+  <!-- <div class="square-list-item">
+    <div class="score-icon green"><i class="fas fa-bus"></i></div>
     <h3>Walk Score</h3>
     <p class="score-count green">88</p>
     <h5><span>Excellent Transit</span> 45 nearby routes: 43 bus, 2 rail, 0 other</h5>
-
-  </div>
+  </div> -->
 </div>
+<h3 class="search-title">CLR Search</h3>
+<div class="row col-sm-12">
 
-<div class="search-wrapper" *ngIf="headingOfCrimeRateIndex">
-  <h3 class="search-title">CLR Search</h3>
-  <table class="table">
-    <thead>
-      <tr>
-        <th class="text-left">{{headingOfCrimeRateIndex[0] }}</th>
-        <th>{{headingOfCrimeRateIndex[1]}}</th>
-        <th>{{headingOfCrimeRateIndex[2]}}</th>
-        <th>{{headingOfCrimeRateIndex[3]}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let riskData of riskIndex">
-        <td *ngIf="riskData.clrIndex !== ''">{{riskData.clrIndex}}</td>
-        <td *ngIf="riskData.clrIndex === ''">-</td>
-        <td *ngIf="riskData.cleveland !== ''" class="text-center">{{riskData.cleveland}}</td>
-        <td *ngIf="riskData.cleveland === ''" class="text-center">-</td>
-        <td *ngIf="riskData.oh !== ''" class="text-center">{{riskData.oh}}</td>
-        <td *ngIf="riskData.oh === ''" class="text-center">-</td>
-        <td *ngIf="riskData.states !== ''" class="text-center">{{riskData.states}}</td>
-        <td *ngIf="riskData.states === ''" class="text-center">-</td>
-    </tbody>
-  </table>
+  <div class="col-md-6">
+    <div class="search-wrapper" *ngIf="headingOfCrimeRateIndex">
 
-  <div #map style="height:400px;width:400px" class="map-container"></div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="text-left">{{headingOfCrimeRateIndex[0] }}</th>
+            <th>{{headingOfCrimeRateIndex[1]}}</th>
+            <th>{{headingOfCrimeRateIndex[2]}}</th>
+            <th>{{headingOfCrimeRateIndex[3]}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let riskData of riskIndex">
+            <td *ngIf="riskData.clrIndex !== ''">{{riskData.clrIndex}}</td>
+            <td *ngIf="riskData.clrIndex === ''">-</td>
+            <td *ngIf="riskData.cleveland !== ''" class="text-center">{{riskData.cleveland}}</td>
+            <td *ngIf="riskData.cleveland === ''" class="text-center">-</td>
+            <td *ngIf="riskData.oh !== ''" class="text-center">{{riskData.oh}}</td>
+            <td *ngIf="riskData.oh === ''" class="text-center">-</td>
+            <td *ngIf="riskData.states !== ''" class="text-center">{{riskData.states}}</td>
+            <td *ngIf="riskData.states === ''" class="text-center">-</td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="map-container" id="map"></div>
+    <div style="height:410px;width:auto" class="map-container" id="pano"></div>
+  </div>
 </div>

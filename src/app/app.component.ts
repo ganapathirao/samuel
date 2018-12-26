@@ -12,12 +12,10 @@ export class AppComponent implements OnInit {
   title = 'app';
   bikeDetails: any;
   headingOfCrimeRateIndex: any;
+  isWalkerScore: boolean;
+  isBikeDetails: boolean;
+  walkscore: number;
   riskIndex: any;
-  uluru: Object = { lat: -25.363, lng: 131.044 };
-  map: Object;
-  marker: Object;
-  zoom: number;
-  @ViewChild('map') mapRef: ElementRef;
   constructor(
     private dataService: DataService) {
 
@@ -25,12 +23,15 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.getTransactionDetails('clrsearch?');
     this.getScore('walkscore?');
-    //this.googleMapsIntialize();
+    this.googleMapsIntialize();
   }
 
-  ngAfterViewInit() {
+  /**Google maps intilaizing
+   * 
+   */
+  googleMapsIntialize() {
     setTimeout(() => {
-      var fenway = { lat: 42.345573, lng: -71.098326 };
+      var fenway = { lat: 37.869260, lng: -122.254811 };
       var map = new google.maps.Map(document.getElementById('map'), {
         center: fenway,
         zoom: 14
@@ -45,25 +46,6 @@ export class AppComponent implements OnInit {
         });
       map.setStreetView(panorama);
     }, 2000);
-
-    // setTimeout(() => {
-    //   this.map = new google.maps.Map(this.mapRef.nativeElement, {
-    //     zoom: 4,
-    //     center: this.uluru
-    //   });
-    //   this.marker = new google.maps.Marker({
-    //     position: this.uluru,
-    //     map: this.map
-    //   });
-    // }, 2000)
-
-  }
-
-  /**Google maps intilaizing
-   * 
-   */
-  googleMapsIntialize() {
-
   }
 
 
@@ -105,11 +87,17 @@ export class AppComponent implements OnInit {
   getScore(url: string) {
     this.dataService.getData(url + "transaction_uid=" + CommonConstants.transaction_uid + "&" + "property_uid=" + CommonConstants.property_uid).subscribe((response: any) => {
       if (response.status) {
-        console.log(response);
         if (response.bike) {
+          this.isBikeDetails = true;
           this.bikeDetails = response.bike;
         } else {
-          this.bikeDetails = [];
+          this.isBikeDetails = false;
+        }
+        if (response.walkscore) {
+          this.isWalkerScore = true;
+          this.walkscore = response.walkscore
+        } else {
+          this.isWalkerScore = false;
         }
       } else {
         console.log("status not found");

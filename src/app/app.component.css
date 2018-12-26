@@ -2,6 +2,10 @@
     box-sizing: border-box;
     font-family: "futura-pt", sans-serif
 } 
+.fas{
+    font: normal normal normal 14px/1 FontAwesome;
+    color: #fff; 
+}
 .text-left{
     text-align: left;
 }
@@ -11,6 +15,14 @@
 .square-list{
     display: flex;
     padding-bottom: 30px;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+.score-icon.orange i,
+.score-icon.blue i,
+.score-icon.green i{
+    width: 100%;
+    line-height: 38px;
 }
 .square-list-item{
     height: 282px;
@@ -88,7 +100,6 @@
     width: 100%;
     letter-spacing: 4px;
     border-collapse: collapse;
-    display: inline-block;
     vertical-align: top;
 }
 .table td, th {
@@ -109,7 +120,4 @@ table thead th{
 .table > thead > tr > th{
     color: #C1C0C0;
     font-size: 14px;
-}
-.map-container{
-    display: inline-block;
 }
